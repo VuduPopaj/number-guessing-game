@@ -18,6 +18,8 @@ export default function Game() {
 
   function submitHandler(e) {
     e.preventDefault();
+    if (input < 1 || input > 100)
+      return alert("Guess a number between 0 and 100!");
     if (input < 1 || input > 100 || count === 0) return;
     if (input === randomNumber) {
       setMsg(success);
